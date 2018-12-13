@@ -1,0 +1,25 @@
+@import "./test_files/direct/*"
+@import "./test_files/indirect/1/*"
+@import "./test_files/multiple/*"
+@import "stylus_tests.import.styl"
+
+#stylus-tests
+  zoom: 1
+
+dashy = dashed
+
+.stylus-dashy-left-border
+  border-left: 1px dashy black
+
+.stylus-overwrite-size
+  // This property is overwritten in stylus_test.import.styl
+  font-size: 10px
+
+.stylus-import-dashy-border
+  border-left: 1px importDashy black
+
+
+// TODO: Uncomment when loading variables from JSON is working
+// import-from-json-dashy = load-var-from-json('test-settings.json', 'public.dashy')
+// .stylus-import-from-json-dashy-border
+//     border-left: 1px import-from-json-dashy black
